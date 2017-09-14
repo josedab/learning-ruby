@@ -40,3 +40,11 @@ get '/products/:id' do
   @page_title = @product.title
   erb :single
 end
+
+get '/deals' do
+  # TEAM PAGE LISTING THE TEAM MEMBERS
+  @limit = 10
+  @page_title = "Deals under $#{@limit}"
+  @products = Product.find_under(@limit)
+  erb :category
+end
