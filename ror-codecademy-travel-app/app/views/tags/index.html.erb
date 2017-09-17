@@ -1,7 +1,7 @@
 <div class="header">
   <div class="container">
     <img src="http://s3.amazonaws.com/codecademy-content/courses/learn-rails/img/logo-1tm.svg" width="80">
-    <h1>Tags</h1>
+    <h1>BokenjiKan</h1>
   </div>
 </div>
 
@@ -12,6 +12,7 @@
       <div class="card col-xs-4">
         <%= image_tag t.image %>
         <h2><%= t.title %></h2>
+        <%= link_to "Learn more", tag_path(t) %>
       </div>
       <% end %>
     </div>
