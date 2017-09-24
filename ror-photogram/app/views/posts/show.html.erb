@@ -1,2 +1,19 @@
-<h1>Posts#show</h1>
-<p>Find me in app/views/posts/show.html.erb</p>
+<div class="posts-wrapper row">
+  <div class="post">
+    <div class="post-head">
+      <div class="name">
+        Jose Baena
+      </div>
+    </div>
+    <div class="image center-block">
+      <%= image_tag @post.image.url(:medium) %>
+    </div>
+    <p class="caption">
+      <%= @post.caption %>
+    </p>
+    <div class="text-center edit-links">
+     <%= link_to "Cancel", posts_path %> | <%= link_to "Edit Post", edit_post_path(@post) %>
+    </div>
+
+  </div>
+</div>
